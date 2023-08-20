@@ -1,11 +1,2 @@
 #!bin/bash
-# Create /tmp/u if it doesn't exist
-mkdir -p /tmp/u
-
-# Move files beginning with an uppercase letter to /tmp/u
-for file in [A-Z]*; do
-    if [ -f "$file" ]; then
-        mv "$file" /tmp/u/
-        echo "Moved '$file' to '/tmp/u/'"
-    fi
-done
+mv [[;upper:]]* /tmp/u
